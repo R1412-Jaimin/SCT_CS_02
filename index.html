@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Image Encryptor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Image Encryptor (Pixel Manipulation)</h1>
+
+        <div class="input-section">
+            <label for="imageUpload">Upload Image:</label>
+            <input type="file" id="imageUpload" accept="image/*">
+        </div>
+
+        <div class="controls-section">
+            <div class="operation-group">
+                <h2>Pixel Swapping</h2>
+                <div class="coords-input">
+                    <label>Pixel 1 (x,y):</label>
+                    <input type="number" id="p1x" value="50" min="0">
+                    <input type="number" id="p1y" value="50" min="0">
+                </div>
+                <div class="coords-input">
+                    <label>Pixel 2 (x,y):</label>
+                    <input type="number" id="p2x" value="150" min="0">
+                    <input type="number" id="p2y" value="100" min="0">
+                </div>
+                <button id="encryptSwap">Encrypt (Swap)</button>
+                <button id="decryptSwap">Decrypt (Swap)</button>
+            </div>
+
+            <div class="operation-group">
+                <h2>Mathematical Operation</h2>
+                <label for="mathValue">Value (0-255):</label>
+                <input type="number" id="mathValue" value="50" min="0" max="255">
+                <select id="mathOperationType">
+                    <option value="add">Add</option>
+                    <option value="subtract">Subtract</option>
+                </select>
+                <button id="encryptMath">Encrypt (Math)</button>
+                <button id="decryptMath">Decrypt (Math)</button>
+            </div>
+        </div>
+
+        <div class="image-display-section">
+            <div class="image-box">
+                <h3>Original Image</h3>
+                <img id="originalImagePreview" src="" alt="Original Image" style="max-width: 100%; height: auto; display: none;">
+                <canvas id="originalCanvas" style="display: none; border: 1px solid #ccc;"></canvas>
+            </div>
+            <div class="image-box">
+                <h3>Encrypted Image</h3>
+                <canvas id="encryptedCanvas" style="display: none; border: 1px solid #ccc;"></canvas>
+            </div>
+            <div class="image-box">
+                <h3>Decrypted Image</h3>
+                <canvas id="decryptedCanvas" style="display: none; border: 1px solid #ccc;"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
