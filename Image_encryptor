@@ -1,0 +1,7 @@
+Here's the full code of a simple image encryption tool using pixel manipulation, built entirely with HTML, CSS, and JavaScript. It allows:
+
+Uploading an image
+Viewing the original and encrypted versions
+Performing operations:
+Swap pixels (basic reversal)
+Add a fixed number to RGB values (e.g. +50)
